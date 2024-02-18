@@ -1,0 +1,79 @@
+<script>
+import { glEmojiTag } from '~/emoji';
+import { n__ } from '~/locale';
+import { GlPopover } from '@gitlab/ui';
+
+export default {
+  components: {
+    GlPopover,
+  },
+  props: {
+    currentRequest: {
+      type: Object,
+      required: true,
+    },
+    requests: {
+      type: Array,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      currentRequestId: this.currentRequest.id,
+    };
+  },
+  computed: {
+    requestsWithWarnings() {
+      return this.requests.filter(request => request.hasWarnings);
+    },
+    warningMessage() {
+      return n__(
+        '%d request with warnings',
+        '%d requests with warnings',
+        this.requestsWithWarnings.length,
+      );
+    },
+  },
+  watch: {
+    currentRequestId(newRequestId) {
+      this.$emit('change-current-request', newRequestId);
+    },
+  },
+  methods: {
+    truncatedUrl(requestUrl) {
+      const components = requestUrl.replace(/\/$/, '').split('/');
+      let truncated = components[components.length - 1];
+
+      if (truncated.match(/^\d+$/)) {
+        truncated = `${components[components.length - 2]}/${truncated}`;
+      }
+
+      return truncated;
+    },
+    glEmojiTag,
+  },
+};
+</script>
+<template>
+  <div id="peek-request-selector">
+    <select v-model="currentRequestId">
+      <option
+        v-for="request in requests"
+        :key="request.id"
+        :value="request.id"
+        class="qa-performance-bar-request"
+      >
+        {{ truncatedUrl(request.url) }}
+        <span v-if="request.hasWarnings">(!)</span>
+      </option>
+    </select>
+    <span v-if="requestsWithWarnings.length">
+      <span id="performance-bar-request-selector-warning" v-html="glEmojiTag('warning')"></span>
+      <gl-popover
+        target="performance-bar-request-selector-warning"
+        :content="warningMessage"
+        triggers="hover focus"
+      />
+    </span>
+  </div>
+</template>
