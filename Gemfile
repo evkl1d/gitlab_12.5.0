@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.3'
+gem 'rails', '7.0.8.1'
 
 gem 'bootsnap', '~> 1.4'
 
@@ -8,9 +8,9 @@ gem 'bootsnap', '~> 1.4'
 gem 'nakayoshi_fork', '~> 0.0.4'
 
 # Responders respond_to and respond_with
-gem 'responders', '~> 3.0'
+gem 'responders', '~> 3.0', '>= 3.0.1'
 
-gem 'sprockets', '~> 3.7.0'
+gem 'sprockets', '~> 4.0.0'
 
 # Default values for AR models
 gem 'default_value_for', '~> 3.3.0'
@@ -19,33 +19,33 @@ gem 'default_value_for', '~> 3.3.0'
 gem 'pg', '~> 1.1'
 
 gem 'rugged', '~> 0.28'
-gem 'grape-path-helpers', '~> 1.1'
+gem 'grape-path-helpers', '~> 1.2', '>= 1.2.0'
 
 gem 'faraday', '~> 0.12'
 
 # Authentication libraries
-gem 'devise', '~> 4.6'
-gem 'doorkeeper', '~> 4.3'
-gem 'doorkeeper-openid_connect', '~> 1.5'
-gem 'omniauth', '~> 1.8'
-gem 'omniauth-auth0', '~> 2.0.0'
+gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'doorkeeper', '~> 4.4', '>= 4.4.0'
+gem 'doorkeeper-openid_connect', '~> 1.5', '>= 1.5.1'
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth-auth0', '~> 2.1.0'
 gem 'omniauth-azure-oauth2', '~> 0.0.9'
 gem 'omniauth-cas3', '~> 1.1.4'
-gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-github', '~> 1.3'
-gem 'omniauth-gitlab', '~> 1.0.2'
-gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-facebook', '~> 5.0.0'
+gem 'omniauth-github', '~> 1.4', '>= 1.4.0'
+gem 'omniauth-gitlab', '~> 1.0.4'
+gem 'omniauth-google-oauth2', '~> 0.6.1'
 gem 'omniauth-kerberos', '~> 0.3.0', group: :kerberos
-gem 'omniauth-oauth2-generic', '~> 0.2.2'
-gem 'omniauth-saml', '~> 1.10'
+gem 'omniauth-oauth2-generic', '~> 0.2.3'
+gem 'omniauth-saml', '~> 1.10', '>= 1.10.1'
 gem 'omniauth-shibboleth', '~> 1.3.0'
 gem 'omniauth-twitter', '~> 1.4'
-gem 'omniauth_crowd', '~> 2.2.0'
+gem 'omniauth_crowd', '~> 2.3.0'
 gem 'omniauth-authentiq', '~> 0.3.3'
-gem 'omniauth_openid_connect', '~> 0.3.3'
+gem 'omniauth_openid_connect', '~> 0.3.4'
 gem "omniauth-ultraauth", '~> 0.0.2'
 gem 'omniauth-salesforce', '~> 1.0.5'
-gem 'rack-oauth2', '~> 1.9.3'
+gem 'rack-oauth2', '~> 1.10.0'
 gem 'jwt', '~> 2.1.0'
 
 # Kerberos authentication. EE-only
@@ -54,10 +54,10 @@ gem 'gssapi', group: :kerberos
 # Spam and anti-bot protection
 gem 'recaptcha', '~> 4.11', require: 'recaptcha/rails'
 gem 'akismet', '~> 2.0'
-gem 'invisible_captcha', '~> 0.12.1'
+gem 'invisible_captcha', '~> 0.12.2'
 
 # Two-factor authentication
-gem 'devise-two-factor', '~> 3.0.0'
+gem 'devise-two-factor', '~> 4.0.2'
 gem 'rqrcode-rails3', '~> 0.1.7'
 gem 'attr_encrypted', '~> 3.1.0'
 gem 'u2f', '~> 0.2.1'
@@ -77,11 +77,11 @@ gem 'gpgme', '~> 2.0.19'
 # LDAP Auth
 # GitLab fork with several improvements to original library. For full list of changes
 # see https://github.com/intridea/omniauth-ldap/compare/master...gitlabhq:master
-gem 'gitlab_omniauth-ldap', '~> 2.1.1', require: 'omniauth-ldap'
+gem 'gitlab_omniauth-ldap', '~> 2.2.0', require: 'omniauth-ldap'
 gem 'net-ldap'
 
 # API
-gem 'grape', '~> 1.1.0'
+gem 'grape', '~> 1.2.0'
 gem 'grape-entity', '~> 0.7.1'
 gem 'rack-cors', '~> 1.0.0', require: 'rack/cors'
 
@@ -90,8 +90,8 @@ gem 'graphql', '~> 1.9.11'
 # NOTE: graphiql-rails v1.5+ doesn't work: https://gitlab.com/gitlab-org/gitlab/issues/31771
 # TODO: remove app/views/graphiql/rails/editors/show.html.erb when https://github.com/rmosolgo/graphiql-rails/pull/71 is released:
 # https://gitlab.com/gitlab-org/gitlab/issues/31747
-gem 'graphiql-rails', '~> 1.4.10'
-gem 'apollo_upload_server', '~> 2.0.0.beta3'
+gem 'graphiql-rails', '~> 1.4.11'
+gem 'apollo_upload_server', '~> 2.0.0.0'
 gem 'graphql-docs', '~> 1.6.0', group: [:development, :test]
 
 # Disable strong_params so that Mash does not respond to :permitted?
@@ -150,7 +150,7 @@ gem 'asciidoctor-include-ext', '~> 0.3.1', require: false
 gem 'asciidoctor-plantuml', '0.0.9'
 gem 'rouge', '~> 3.11.0'
 gem 'truncato', '~> 0.7.11'
-gem 'bootstrap_form', '~> 4.2.0'
+gem 'bootstrap_form', '~> 4.3.0'
 gem 'nokogiri', '~> 1.10.5'
 gem 'escape_utils', '~> 1.1'
 
@@ -162,7 +162,7 @@ gem 'diffy', '~> 3.1.0'
 gem 'diff_match_patch', '~> 0.1.0'
 
 # Application server
-gem 'rack', '~> 2.0.7'
+gem 'rack', '~> 2.2.8', '>= 2.2.8.1'
 
 group :unicorn do
   gem 'unicorn', '~> 5.4.1'
@@ -182,10 +182,10 @@ gem 'state_machines-activerecord', '~> 0.6.0'
 gem 'acts-as-taggable-on', '~> 6.0'
 
 # Background jobs
-gem 'sidekiq', '~> 5.2.7'
-gem 'sidekiq-cron', '~> 1.0'
+gem 'sidekiq', '~> 5.2.9'
+gem 'sidekiq-cron', '~> 1.1', '>= 1.1.0'
 gem 'redis-namespace', '~> 1.6.0'
-gem 'gitlab-sidekiq-fetcher', '0.5.2', require: 'sidekiq-reliable-fetch'
+gem 'gitlab-sidekiq-fetcher', '0.5.3', require: 'sidekiq-reliable-fetch'
 
 # Cron Parser
 gem 'fugit', '~> 1.2.1'
@@ -242,7 +242,7 @@ gem 'slack-notifier', '~> 1.5.1'
 gem 'hangouts-chat', '~> 0.0.5'
 
 # Asana integration
-gem 'asana', '~> 0.8.1'
+gem 'asana', '~> 0.9.0'
 
 # FogBugz integration
 gem 'ruby-fogbugz', '~> 0.2.1'
@@ -277,36 +277,36 @@ gem 'chronic', '~> 0.10.2'
 gem 'gitlab_chronic_duration', '~> 0.10.6.1'
 
 gem 'webpack-rails', '~> 0.9.10'
-gem 'rack-proxy', '~> 0.6.0'
+gem 'rack-proxy', '~> 0.6.1'
 
-gem 'sassc-rails', '~> 2.1.0'
+gem 'sassc-rails', '~> 2.1.1'
 gem 'uglifier', '~> 2.7.2'
 
 gem 'addressable', '~> 2.5.2'
-gem 'font-awesome-rails', '~> 4.7'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'gemojione', '~> 3.3'
-gem 'gon', '~> 6.2'
+gem 'gon', '~> 6.2', '>= 6.2.1'
 gem 'request_store', '~> 1.3'
 gem 'base32', '~> 0.3.0'
 
 gem "gitlab-license", "~> 1.0"
 
 # Protect against bruteforcing
-gem 'rack-attack', '~> 6.2.0'
+gem 'rack-attack', '~> 6.2.1'
 
 # Sentry integration
 gem 'sentry-raven', '~> 2.9'
 
-gem 'premailer-rails', '~> 1.10.3'
+gem 'premailer-rails', '~> 1.11.0'
 
 # LabKit: Tracing and Correlation
-gem 'gitlab-labkit', '~> 0.5'
+gem 'gitlab-labkit', '~> 0.24', '>= 0.24.0'
 
 # I18n
 gem 'ruby_parser', '~> 3.8', require: false
-gem 'rails-i18n', '~> 5.1'
+gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'gettext_i18n_rails', '~> 1.8.0'
-gem 'gettext_i18n_rails_js', '~> 1.3'
+gem 'gettext_i18n_rails_js', '~> 1.3', '>= 1.3.1'
 gem 'gettext', '~> 3.2.2', require: false, group: :development
 
 gem 'batch-loader', '~> 1.4.0'
@@ -319,7 +319,7 @@ gem 'gitlab-peek', '~> 0.0.1', require: 'peek'
 gem 'snowplow-tracker', '~> 0.6.1'
 
 # Memory benchmarks
-gem 'derailed_benchmarks', require: false
+gem 'derailed_benchmarks', '>= 1.3.6', require: false
 
 # Metrics
 group :metrics do
@@ -335,15 +335,15 @@ group :development do
   gem 'brakeman', '~> 4.2', require: false
   gem 'danger', '~> 6.0', require: false
 
-  gem 'letter_opener_web', '~> 1.3.4'
+  gem 'letter_opener_web', '~> 1.4.0'
   gem 'rblineprof', '~> 0.3.6', platform: :mri, require: false
 
   # Better errors handler
-  gem 'better_errors', '~> 2.5.0'
+  gem 'better_errors', '~> 2.5.1'
   gem 'binding_of_caller', '~> 0.8.0'
 
   # thin instead webrick
-  gem 'thin', '~> 1.7.0'
+  gem 'thin', '~> 1.8.0'
 end
 
 group :development, :test do
@@ -355,10 +355,10 @@ group :development, :test do
   gem 'fuubar', '~> 2.2.0'
 
   gem 'database_cleaner', '~> 1.7.0'
-  gem 'factory_bot_rails', '~> 5.1.0'
-  gem 'rspec-rails', '~> 3.8.0'
+  gem 'factory_bot_rails', '~> 5.1.1'
+  gem 'rspec-rails', '~> 3.8.3'
   gem 'rspec-retry', '~> 0.6.1'
-  gem 'rspec_profiling', '~> 0.0.5'
+  gem 'rspec_profiling', '~> 0.0.6'
   gem 'rspec-set', '~> 0.1.3'
   gem 'rspec-parameterized', require: false
 
@@ -368,8 +368,8 @@ group :development, :test do
   # Generate Fake data
   gem 'ffaker', '~> 2.10'
 
-  gem 'capybara', '~> 3.22.0'
-  gem 'capybara-screenshot', '~> 1.0.22'
+  gem 'capybara', '~> 3.23.0'
+  gem 'capybara-screenshot', '~> 1.0.23'
   gem 'selenium-webdriver', '~> 3.141'
 
   gem 'spring', '~> 2.0.0'
@@ -407,7 +407,7 @@ group :test do
   gem 'email_spec', '~> 2.2.0'
   gem 'json-schema', '~> 2.8.0'
   gem 'webmock', '~> 3.5.1'
-  gem 'rails-controller-testing'
+  gem 'rails-controller-testing', '>= 1.0.5'
   gem 'concurrent-ruby', '~> 1.1'
   gem 'test-prof', '~> 0.10.0'
   gem 'rspec_junit_formatter'
@@ -428,10 +428,10 @@ gem 'benchmark-memory', '~> 0.1', require: false
 gem 'activerecord-explain-analyze', '~> 0.1', require: false
 
 # OAuth
-gem 'oauth2', '~> 1.4'
+gem 'oauth2', '~> 1.4', '>= 1.4.2'
 
 # Health check
-gem 'health_check', '~> 2.6.0'
+gem 'health_check', '~> 2.7.0'
 
 # System information
 gem 'vmstat', '~> 2.3.0'
@@ -466,8 +466,8 @@ gem 'flipper-active_support_cache_store', '~> 0.17.1'
 gem 'unleash', '~> 0.1.5'
 
 # Structured logging
-gem 'lograge', '~> 0.5'
-gem 'grape_logging', '~> 1.7'
+gem 'lograge', '~> 0.11', '>= 0.11.0'
+gem 'grape_logging', '~> 1.8', '>= 1.8.0'
 
 # DNS Lookup
 gem 'gitlab-net-dns', '~> 0.9.1'
