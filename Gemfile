@@ -108,7 +108,7 @@ gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 
 # for backups
-gem 'fog-aws', '~> 3.5'
+gem 'fog-aws', '~> 3.29', '>= 3.29.0'
 # Locked until fog-google resolves https://github.com/fog/fog-google/issues/421.
 # Also see config/initializers/fog_core_patch.rb.
 gem 'fog-core', '= 2.1.0'
