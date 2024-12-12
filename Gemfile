@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.3'
+gem 'rails', '7.0.8.7'
 
 gem 'bootsnap', '~> 1.4'
 
@@ -90,8 +90,8 @@ gem 'graphql', '~> 1.9.11'
 # NOTE: graphiql-rails v1.5+ doesn't work: https://gitlab.com/gitlab-org/gitlab/issues/31771
 # TODO: remove app/views/graphiql/rails/editors/show.html.erb when https://github.com/rmosolgo/graphiql-rails/pull/71 is released:
 # https://gitlab.com/gitlab-org/gitlab/issues/31747
-gem 'graphiql-rails', '~> 1.4.10'
-gem 'apollo_upload_server', '~> 2.0.0.beta3'
+gem 'graphiql-rails', '~> 1.10.0'
+gem 'apollo_upload_server', '~> 2.0.4.0'
 gem 'graphql-docs', '~> 1.6.0', group: [:development, :test]
 
 # Disable strong_params so that Mash does not respond to :permitted?
@@ -431,7 +431,7 @@ gem 'activerecord-explain-analyze', '~> 0.1', require: false
 gem 'oauth2', '~> 1.4'
 
 # Health check
-gem 'health_check', '~> 2.6.0'
+gem 'health_check', '~> 2.8.0'
 
 # System information
 gem 'vmstat', '~> 2.3.0'
