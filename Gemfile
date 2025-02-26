@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.3'
+gem 'rails', '7.0.0'
 
 gem 'bootsnap', '~> 1.4'
 
@@ -90,8 +90,8 @@ gem 'graphql', '~> 1.9.11'
 # NOTE: graphiql-rails v1.5+ doesn't work: https://gitlab.com/gitlab-org/gitlab/issues/31771
 # TODO: remove app/views/graphiql/rails/editors/show.html.erb when https://github.com/rmosolgo/graphiql-rails/pull/71 is released:
 # https://gitlab.com/gitlab-org/gitlab/issues/31747
-gem 'graphiql-rails', '~> 1.4.10'
-gem 'apollo_upload_server', '~> 2.0.0.beta3'
+gem 'graphiql-rails', '~> 1.10.0'
+gem 'apollo_upload_server', '~> 2.0.4.0'
 gem 'graphql-docs', '~> 1.6.0', group: [:development, :test]
 
 # Disable strong_params so that Mash does not respond to :permitted?
@@ -135,7 +135,7 @@ gem 'aws-sdk'
 gem 'faraday_middleware-aws-signers-v4'
 
 # Markdown and HTML processing
-gem 'html-pipeline', '~> 2.8'
+gem 'html-pipeline', '~> 3.0', '>= 3.0.0'
 gem 'deckar01-task_list', '2.2.1'
 gem 'gitlab-markup', '~> 1.7.0'
 gem 'github-markup', '~> 1.7.0', require: 'github/markup'
@@ -151,7 +151,7 @@ gem 'asciidoctor-plantuml', '0.0.9'
 gem 'rouge', '~> 3.11.0'
 gem 'truncato', '~> 0.7.11'
 gem 'bootstrap_form', '~> 4.2.0'
-gem 'nokogiri', '~> 1.10.5'
+gem 'nokogiri', '~> 1.18.3'
 gem 'escape_utils', '~> 1.1'
 
 # Calendar rendering
@@ -251,7 +251,7 @@ gem 'ruby-fogbugz', '~> 0.2.1'
 gem 'kubeclient', '~> 4.4.0'
 
 # Sanitize user input
-gem 'sanitize', '~> 4.6'
+gem 'sanitize', '~> 6.0', '>= 6.0.0'
 gem 'babosa', '~> 1.0.2'
 
 # Sanitizes SVG input
@@ -431,7 +431,7 @@ gem 'activerecord-explain-analyze', '~> 0.1', require: false
 gem 'oauth2', '~> 1.4'
 
 # Health check
-gem 'health_check', '~> 2.6.0'
+gem 'health_check', '~> 2.8.0'
 
 # System information
 gem 'vmstat', '~> 2.3.0'
