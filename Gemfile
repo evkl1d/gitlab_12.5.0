@@ -81,7 +81,7 @@ gem 'gitlab_omniauth-ldap', '~> 2.1.1', require: 'omniauth-ldap'
 gem 'net-ldap'
 
 # API
-gem 'grape', '~> 1.1.0'
+gem 'grape', '~> 2.4.0'
 gem 'grape-entity', '~> 0.7.1'
 gem 'rack-cors', '~> 1.0.0', require: 'rack/cors'
 
@@ -176,7 +176,7 @@ group :puma do
 end
 
 # State machine
-gem 'state_machines-activerecord', '~> 0.6.0'
+gem 'state_machines-activerecord', '~> 0.10.0'
 
 # Issue tags
 gem 'acts-as-taggable-on', '~> 6.0'
@@ -355,7 +355,7 @@ group :development, :test do
   gem 'fuubar', '~> 2.2.0'
 
   gem 'database_cleaner', '~> 1.7.0'
-  gem 'factory_bot_rails', '~> 5.1.0'
+  gem 'factory_bot_rails', '~> 6.5.0'
   gem 'rspec-rails', '~> 3.8.0'
   gem 'rspec-retry', '~> 0.6.1'
   gem 'rspec_profiling', '~> 0.0.5'
