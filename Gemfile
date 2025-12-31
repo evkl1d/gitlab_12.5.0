@@ -191,7 +191,7 @@ gem 'gitlab-sidekiq-fetcher', '0.5.2', require: 'sidekiq-reliable-fetch'
 gem 'fugit', '~> 1.2.1'
 
 # HTTP requests
-gem 'httparty', '~> 0.16.4'
+gem 'httparty', '~> 0.24.0'
 
 # Colored output to console
 gem 'rainbow', '~> 3.0'
@@ -226,7 +226,7 @@ gem 'redis-rails', '~> 5.0.2'
 gem 'discordrb-webhooks-blackst0ne', '~> 3.3', require: false
 
 # HipChat integration
-gem 'hipchat', '~> 1.5.0'
+gem 'hipchat', '~> 1.5.3'
 
 # Jira integration
 gem 'jira-ruby', '~> 1.7'
