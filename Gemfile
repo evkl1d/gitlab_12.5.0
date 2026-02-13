@@ -21,22 +21,22 @@ gem 'pg', '~> 1.1'
 gem 'rugged', '~> 0.28'
 gem 'grape-path-helpers', '~> 1.1'
 
-gem 'faraday', '~> 0.12'
+gem 'faraday', '~> 2.14', '>= 2.14.1'
 
 # Authentication libraries
 gem 'devise', '~> 4.6'
 gem 'doorkeeper', '~> 4.3'
 gem 'doorkeeper-openid_connect', '~> 1.5'
 gem 'omniauth', '~> 1.8'
-gem 'omniauth-auth0', '~> 2.0.0'
+gem 'omniauth-auth0', '~> 2.1.0'
 gem 'omniauth-azure-oauth2', '~> 0.0.9'
 gem 'omniauth-cas3', '~> 1.1.4'
-gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-github', '~> 1.3'
-gem 'omniauth-gitlab', '~> 1.0.2'
-gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-facebook', '~> 5.0.0'
+gem 'omniauth-github', '~> 1.4', '>= 1.4.0'
+gem 'omniauth-gitlab', '~> 1.0.4'
+gem 'omniauth-google-oauth2', '~> 0.6.1'
 gem 'omniauth-kerberos', '~> 0.3.0', group: :kerberos
-gem 'omniauth-oauth2-generic', '~> 0.2.2'
+gem 'omniauth-oauth2-generic', '~> 0.2.3'
 gem 'omniauth-saml', '~> 1.10'
 gem 'omniauth-shibboleth', '~> 1.3.0'
 gem 'omniauth-twitter', '~> 1.4'
@@ -66,7 +66,7 @@ gem 'u2f', '~> 0.2.1'
 gem 'validates_hostname', '~> 1.0.6'
 gem 'rubyzip', '~> 1.3.0', require: 'zip'
 # GitLab Pages letsencrypt support
-gem 'acme-client', '~> 2.0.2'
+gem 'acme-client', '~> 2.0.10'
 
 # Browser detection
 gem 'browser', '~> 2.5'
@@ -112,14 +112,14 @@ gem 'fog-aws', '~> 3.5'
 # Locked until fog-google resolves https://github.com/fog/fog-google/issues/421.
 # Also see config/initializers/fog_core_patch.rb.
 gem 'fog-core', '= 2.1.0'
-gem 'fog-google', '~> 1.9'
+gem 'fog-google', '~> 1.16', '>= 1.16.0'
 gem 'fog-local', '~> 0.6'
 gem 'fog-openstack', '~> 1.0'
 gem 'fog-rackspace', '~> 0.1.1'
 gem 'fog-aliyun', '~> 0.3'
 
 # for Google storage
-gem 'google-api-client', '~> 0.23'
+gem 'google-api-client', '~> 0.53', '>= 0.53.0'
 
 # for aws storage
 gem 'unf', '~> 0.1.4'
@@ -128,7 +128,7 @@ gem 'unf', '~> 0.1.4'
 gem 'seed-fu', '~> 2.3.7'
 
 # Search
-gem 'elasticsearch-model', '~> 0.1.9'
+gem 'elasticsearch-model', '~> 5.0.0'
 gem 'elasticsearch-rails', '~> 0.1.9', require: 'elasticsearch/rails/instrumentation'
 gem 'elasticsearch-api',   '5.0.3'
 gem 'aws-sdk'
@@ -242,7 +242,7 @@ gem 'slack-notifier', '~> 1.5.1'
 gem 'hangouts-chat', '~> 0.0.5'
 
 # Asana integration
-gem 'asana', '~> 0.8.1'
+gem 'asana', '~> 2.0.1'
 
 # FogBugz integration
 gem 'ruby-fogbugz', '~> 0.2.1'
@@ -295,7 +295,7 @@ gem "gitlab-license", "~> 1.0"
 gem 'rack-attack', '~> 6.2.0'
 
 # Sentry integration
-gem 'sentry-raven', '~> 2.9'
+gem 'sentry-raven', '~> 3.0', '>= 3.0.0'
 
 gem 'premailer-rails', '~> 1.10.3'
 
@@ -333,7 +333,7 @@ end
 
 group :development do
   gem 'brakeman', '~> 4.2', require: false
-  gem 'danger', '~> 6.0', require: false
+  gem 'danger', '~> 9.2', '>= 9.2.0', require: false
 
   gem 'letter_opener_web', '~> 1.3.4'
   gem 'rblineprof', '~> 0.3.6', platform: :mri, require: false
@@ -414,7 +414,7 @@ group :test do
   gem 'guard-rspec'
 end
 
-gem 'octokit', '~> 4.9'
+gem 'octokit', '~> 4.23', '>= 4.23.0'
 
 gem 'mail_room', '~> 0.9.1'
 
@@ -428,7 +428,7 @@ gem 'benchmark-memory', '~> 0.1', require: false
 gem 'activerecord-explain-analyze', '~> 0.1', require: false
 
 # OAuth
-gem 'oauth2', '~> 1.4'
+gem 'oauth2', '~> 1.4', '>= 1.4.8'
 
 # Health check
 gem 'health_check', '~> 2.6.0'
